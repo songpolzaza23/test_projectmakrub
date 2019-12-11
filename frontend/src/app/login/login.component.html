@@ -1,0 +1,25 @@
+<div class="login-page">
+    <div class="content">
+        <!-- <h1 class="app-name">Sb Admin Material</h1> -->
+        <form class="login-form" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+            <div class="text-center">
+                <div class="logo"></div>
+                <mat-form-field class="w-70">
+                    <input matInput placeholder="ชื่อผู้ใช้" name="username" #username="ngModel" [(ngModel)]="model.username">
+                </mat-form-field>
+                <mat-form-field class="w-70">
+                    <input matInput type="password" placeholder="รหัสผ่าน" name="password" #password="ngModel" [(ngModel)]="model.password">
+                </mat-form-field>
+                <div fxFlex fxLayout="row" fxLayout.lt-md="column">
+                    <div fxFlexFill>
+                        <button mat-raised-button color="primary" class="w-40" type="submit">เข้าสู่ระบบ</button>
+                    </div>
+                </div>
+                <div style="color: red; margin: auto;">*ชื่อผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง</div><br>
+                <a href="#" class="text-login">ลืมรหัสผ่าน?</a><br>
+
+            </div>
+
+        </form>
+    </div>
+</div>
